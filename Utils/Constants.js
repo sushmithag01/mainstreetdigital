@@ -19,4 +19,4 @@ export const TERMSANDCONDITION_URL = 'https://meylah.com/termsofuse/';
 
 // export const STRIPE_SECRET_KEY = 'sk_test_51NjxGJKqX669nwDWwvFvCsupUOkRPS19xFy6ORiYAkAdkh7MrEL18A86ilj1wv8WXRonsOWJ9IUgctvIkvTidwSh00FEWC2ilk';
 
-export const STRIPE_PUBLIC_KEY = 'pk_live_51NjxGJKqX669nwDWIs2Q1Vc99aC95zAyCAlqSP8XYvCB2nVcTDzWRja5WrokB6Y1HMtFybK4cG9HUeazwkgzZFxz00C7H2hyhd';
+export const STRIPE_PUBLIC_KEY = '';
