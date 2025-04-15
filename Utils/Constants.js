@@ -17,4 +17,3 @@ export const TERMSANDCONDITION_URL = 'https://meylah.com/termsofuse/';
 
 // export const STRIPE_PUBLIC_KEY = "";
 
-export const STRIPE_PUBLIC_KEY = '';
