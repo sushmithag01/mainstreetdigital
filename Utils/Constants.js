@@ -15,8 +15,6 @@ export const PRIVACYPOLICY_URL = 'https://meylah.com/privacy-policy/';
 
 export const TERMSANDCONDITION_URL = 'https://meylah.com/termsofuse/';
 
-// export const STRIPE_PUBLIC_KEY = "pk_test_51NjxGJKqX669nwDW9yKsL09xbK2udypxWsK3ZdfujuQpbyu3AhclMg4DfFIjusCuRECQGRZjTb1TKO132Nn731va009d3mn8Ra";
-
-// export const STRIPE_SECRET_KEY = 'sk_test_51NjxGJKqX669nwDWwvFvCsupUOkRPS19xFy6ORiYAkAdkh7MrEL18A86ilj1wv8WXRonsOWJ9IUgctvIkvTidwSh00FEWC2ilk';
+// export const STRIPE_PUBLIC_KEY = "";
 
 export const STRIPE_PUBLIC_KEY = '';
