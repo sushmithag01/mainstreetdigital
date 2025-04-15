@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Shop Local</string>
+    <string name="facebook_app_id">636803664967848</string>
+    <string name="facebook_client_token">fc12e187f5a78276b55dbdd263d24e5b</string>
+    <string name="fb_login_protocol_scheme">fb1234</string>
+</resources>

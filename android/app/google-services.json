@@ -1,0 +1,162 @@
+{
+  "project_info": {
+    "project_number": "317991843833",
+    "firebase_url": "https://mainstreetdigital-enduser-default-rtdb.firebaseio.com",
+    "project_id": "mainstreetdigital-enduser",
+    "storage_bucket": "mainstreetdigital-enduser.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:317991843833:android:6001cb285774f33c3d6f28",
+        "android_client_info": {
+          "package_name": "com.mainstreet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "317991843833-a0k3qvfivehtk7k5ttfj5ltghmbl827s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mainstreet",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "317991843833-r6jc27f4l18c1l5m4ul3dnh439gsburv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTdMuBTceVqumwE8vDyOY1rDFfSl_97-U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "317991843833-gbh6kpdoqhnhplr1v5mhefceoas7oev9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "317991843833-8lnm1t1ejsd7elsbnb3b4nvcfgm1uoof.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.shoplocaldigital.mainstreet",
+                "app_store_id": "6447948344"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:317991843833:android:446270c0d8d050dc3d6f28",
+        "android_client_info": {
+          "package_name": "com.msd"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "317991843833-07gucq8174jsj7nesjk66luptjkl7ump.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.msd",
+            "certificate_hash": "dccb01a5ae7a0591bd998e94aa4f87d0ab434764"
+          }
+        },
+        {
+          "client_id": "317991843833-bb63d8joh6ghp1kck01v4tgtvgbpe58g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.msd",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "317991843833-qu2c09aj088j6uqdkt47eeib28fbk7mt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.msd",
+            "certificate_hash": "f68feb9621a852f6285716ceb7f7434f985891d7"
+          }
+        },
+        {
+          "client_id": "317991843833-r6jc27f4l18c1l5m4ul3dnh439gsburv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTdMuBTceVqumwE8vDyOY1rDFfSl_97-U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "317991843833-gbh6kpdoqhnhplr1v5mhefceoas7oev9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "317991843833-8lnm1t1ejsd7elsbnb3b4nvcfgm1uoof.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.shoplocaldigital.mainstreet",
+                "app_store_id": "6447948344"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:317991843833:android:33806bf13164fe643d6f28",
+        "android_client_info": {
+          "package_name": "com.shoplocal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "317991843833-07sv212bv7htfud5tdnuhut6s8cmcu5j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.shoplocal",
+            "certificate_hash": "44aa8a6e4aca3469fe6e7969a8b8926106c8252e"
+          }
+        },
+        {
+          "client_id": "317991843833-r6jc27f4l18c1l5m4ul3dnh439gsburv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTdMuBTceVqumwE8vDyOY1rDFfSl_97-U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "317991843833-gbh6kpdoqhnhplr1v5mhefceoas7oev9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "317991843833-8lnm1t1ejsd7elsbnb3b4nvcfgm1uoof.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.shoplocaldigital.mainstreet",
+                "app_store_id": "6447948344"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

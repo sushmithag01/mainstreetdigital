@@ -1,0 +1,93 @@
+# Resolve react_native_pods.rb with node to allow for hoisting
+require Pod::Executable.execute_command('node', ['-p',
+  'require.resolve(
+    "react-native/scripts/react_native_pods.rb",
+    {paths: [process.argv[1]]},
+  )', __dir__]).strip
+
+platform :ios, '15.0'
+prepare_react_native_project!
+
+# Framework linkage setup
+linkage = ENV['USE_FRAMEWORKS']
+if linkage != nil
+  Pod::UI.puts "Configuring Pod with #{linkage}ally linked Frameworks".green
+  use_frameworks! :linkage => linkage.to_sym
+else
+  use_frameworks! :linkage => :static  # Use static linkage by default
+end
+
+use_modular_headers!
+
+pod 'FirebaseFirestoreSwift'
+$RNFirebaseAsStaticFramework = true
+
+target 'MSD' do
+  config = use_native_modules!
+
+  use_react_native!(
+    :path => config[:reactNativePath],
+    # An absolute path to your application root.
+    :app_path => "#{Pod::Config.instance.installation_root}/.."
+  )
+
+  target 'MSDTests' do
+    inherit! :complete
+    # Pods for testing
+  end
+
+  post_install do |installer|
+    # Custom find and replace steps
+    find_and_replace("../node_modules/react-native/React/Base/RCTKeyCommands.m",
+                     "_modifierFlags", "_modifierEventFlags")
+    find_and_replace("../node_modules/react-native/React/Base/RCTKeyCommands.m",
+                     "_modifiedInput", "_modifiedEventInput")
+    find_and_replace("../node_modules/react-native/React/Base/RCTKeyCommands.m",
+                     "_isKeyDown", "_isKeyEventDown")
+    find_and_replace("../node_modules/react-native/React/DevSupport/RCTPackagerClient.h",
+                     "handleNotification", "handlePackageNotification")
+    find_and_replace("../node_modules/react-native/React/DevSupport/RCTPackagerConnection.mm",
+                     "handleNotification", "handlePackageNotification")
+
+    # Run React Native post-install script
+    react_native_post_install(installer, config[:reactNativePath], :mac_catalyst_enabled => false)
+
+    # Custom Xcode 14 fixes (if necessary)
+    installer.generated_projects.each do |project|
+      project.targets.each do |target|
+        if target.name == "React-Core.common-AccessibilityResources"
+          target.remove_from_project
+        end
+        if target.name == "React-Core.common-RCTVibrationHeaders"
+          target.remove_from_project
+        end
+        target.build_configurations.each do |config|
+          config.build_settings["DEVELOPMENT_TEAM"] = "W52N938P95"
+        end
+        if target.name == 'BoringSSL-GRPC'
+          target.source_build_phase.files.each do |file|
+            if file.settings && file.settings['COMPILER_FLAGS']
+              flags = file.settings['COMPILER_FLAGS'].split
+              flags.reject! { |flag| flag == '-GCC_WARN_INHIBIT_ALL_WARNINGS' }
+              file.settings['COMPILER_FLAGS'] = flags.join(' ')
+            end
+          end
+        end
+      end
+    end
+  end
+end
+
+# Helper method for find and replace functionality
+def find_and_replace(dir, findstr, replacestr)
+  Dir[dir].each do |name|
+    text = File.read(name)
+    replace = text.gsub(findstr, replacestr)
+    if text != replace
+      puts "Fix: " + name
+      File.open(name, "w") { |file| file.puts replace }
+      STDOUT.flush
+    end
+  end
+  Dir[dir + '*/'].each(&method(:find_and_replace))
+end

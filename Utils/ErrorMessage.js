@@ -1,0 +1,1 @@
+export const SessionTimeOut = "Your session has expired! Please log in again";
